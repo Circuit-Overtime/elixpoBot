@@ -53,7 +53,9 @@ Before running Elixpo, ensure you have the following installed:
    
    - Replace the `CHANNELS` array in `elixpo.js` with your desired Discord channel ID(s).
    - Put the Discord Channel ID(s) in this line inside the code:
-   `client.channels.cache.get("put the channel ID to send a welcome message").send("Elixpo > Bonjour!");`
+   ```
+   client.channels.cache.get("put the channel ID to send a welcome message").send("Elixpo > Bonjour!");
+   ```
    This will send a welcome message whenever the BOT is online! (use // to comment if feature not needed)
 
 ## Usage
