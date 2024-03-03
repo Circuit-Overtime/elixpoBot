@@ -1,6 +1,8 @@
-# Elixpo - Discord Chatbot Readme
+# Elixpo - Discord Chatbot 
 
 Elixpo is a Discord chatbot built using Gemini AI and Discord.js. It's designed to provide engaging conversation experiences within Discord servers.
+
+![Screenshot](https://firebasestorage.googleapis.com/v0/b/birthday-1340e.appspot.com/o/Assests%2Felixpo.jpg?alt=media&token=4ad7d61d-9960-43b8-999a-a0a163bd8531)
 
 ## Prerequisites
 
