@@ -4,9 +4,8 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { Client } = require('discord.js');
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
-// const question = "what is the capital of india";
 const IGNORE_PREFIX = "!";
-const CHANNELS = ["1211167740698566723"];
+const CHANNELS = [""]; //put your channel ID(s) here in which the BOT can be accessed!
 
 const client = new Client({
     intents : ['Guilds', 'GuildMembers', 'GuildMessages', 'MessageContent'],
@@ -23,8 +22,7 @@ const generationConfig = {
 
 // Access your API key as an environment variable (see "Set up your API key" above)
 client.on("ready", () => {
-    // console.log("BooleanGPT > Konnichiwa!");
-    client.channels.cache.get("1211167740698566723").send("Elixpo > Bonjour!");
+    client.channels.cache.get("put the channel ID to send a welcome message").send("Elixpo > Bonjour!");
 })
 
 function divideString(inputString, maxLength) {
