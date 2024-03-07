@@ -2,10 +2,11 @@ let messageQueue = [];
 require('dotenv/config');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { Client } = require('discord.js');
-const genAI = new GoogleGenerativeAI(process.env.API_KEY);
+const genAI = new GoogleGenerativeAI("AIzaSyAkivEg_olXzpkaSfWTwSUrNz4wIBgZgKc");
 
 const IGNORE_PREFIX = "!";
-const CHANNELS = [""]; //put your channel ID(s) here in which the BOT can be accessed!
+const CHANNELS = ["1211167740698566723"]; //put your channel ID(s) here in which the BOT can be accessed!
+const token_bot = "MTIxMTE4NTkxNzMwMjI3NjEzNw.GbcgSP.kHN6guK2gJfRvEv8zrpPXivCXfLhbCaUzMjc94";
 
 const client = new Client({
     intents : ['Guilds', 'GuildMembers', 'GuildMessages', 'MessageContent'],
@@ -22,7 +23,7 @@ const generationConfig = {
 
 // Access your API key as an environment variable (see "Set up your API key" above)
 client.on("ready", () => {
-    client.channels.cache.get("put the channel ID to send a welcome message").send("Elixpo > Bonjour!");
+    client.channels.cache.get("1211167740698566723").send("Elixpo > Bonjour!");
 })
 
 function divideString(inputString, maxLength) {
@@ -85,4 +86,4 @@ client.on("messageCreate", async (message) => {
     }
 });
 
-client.login("MTIxMTE4NTkxNzMwMjI3NjEzNw.GyAI1t.oJXM7RtAsMqkr5QUodOqZ6ydCyC_C-T_yhFJOg");
+client.login("MTIxMTE4NTkxNzMwMjI3NjEzNw.GbcgSP.kHN6guK2gJfRvEv8zrpPXivCXfLhbCaUzMjc94");
