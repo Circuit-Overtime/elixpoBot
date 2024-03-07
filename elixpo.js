@@ -2,11 +2,10 @@ let messageQueue = [];
 require('dotenv/config');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { Client } = require('discord.js');
-const genAI = new GoogleGenerativeAI("AIzaSyAkivEg_olXzpkaSfWTwSUrNz4wIBgZgKc");
+const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
 const IGNORE_PREFIX = "!";
-const CHANNELS = ["1211167740698566723"]; //put your channel ID(s) here in which the BOT can be accessed!
-const token_bot = "MTIxMTE4NTkxNzMwMjI3NjEzNw.GbcgSP.kHN6guK2gJfRvEv8zrpPXivCXfLhbCaUzMjc94";
+const CHANNELS = [""]; //put channel ID(s) here
 
 const client = new Client({
     intents : ['Guilds', 'GuildMembers', 'GuildMessages', 'MessageContent'],
@@ -23,7 +22,8 @@ const generationConfig = {
 
 // Access your API key as an environment variable (see "Set up your API key" above)
 client.on("ready", () => {
-    client.channels.cache.get("1211167740698566723").send("Elixpo > Bonjour!");
+    // console.log("BooleanGPT > Konnichiwa!");
+    client.channels.cache.get("put your channel ID here!").send("Elixpo > Bonjour!");
 })
 
 function divideString(inputString, maxLength) {
@@ -86,4 +86,4 @@ client.on("messageCreate", async (message) => {
     }
 });
 
-client.login("MTIxMTE4NTkxNzMwMjI3NjEzNw.GbcgSP.kHN6guK2gJfRvEv8zrpPXivCXfLhbCaUzMjc94");
+client.login(process.env.TOKEN)
