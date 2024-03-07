@@ -22,6 +22,6 @@ jobs:
         run: npm install
 
       - name: Run Bot
-        run: node elixpo.js
+        run: node bot.js
         env:
           DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
